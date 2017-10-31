@@ -43,7 +43,7 @@ SOURCES I USED
 HOW TO RUN
 ---------------------
 
-1. Open the github pages link ...
+1. Open https://bholtlandmedia.nl/srp/
 2. Accept the notification subscription popup (Chrome 47> or Firefox)
 3. Save the website to your home screen (on Android Chrome 47>)
 4. In the terminal npm install all
