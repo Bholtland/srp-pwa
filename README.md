@@ -50,4 +50,6 @@ HOW TO RUN
 5. execute "node push.js"
 6. You should receive a push notification now
 
-
+HOURS SPENT
+-----------------------
+At least 35 hours, including examination and server setup.
