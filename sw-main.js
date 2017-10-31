@@ -1,8 +1,7 @@
 var CACHE_NAME = "my-cache";
 var cachedFiles = [
-  '/index.html'
+  '/srp/index.html'
 ]
-
 
 self.addEventListener('install', function(event) {
 	event.waitUntil(
@@ -27,19 +26,40 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-self.addEventListener('activate', function(event) {
+// self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
+//   event.waitUntil(
+//     caches.keys().then(function(cacheNames) {
+//       return Promise.all(
+//         cacheNames.map(function(cacheName) {
+//         })
+//       );
+//     })
+//   );
+// });
 
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
+self.addEventListener("push", function (event) {
+    console.log("Push event received");
+
+    var pushData = event.data? JSON.parse(event.data.text()): {
+        title: "Hello world!",
+        body: "standard",
+        icon: "http://img03.blogcu.com/images/s/a/n/sancaktepeses/patron__ildirdi_1243956048.jpg"
+    };
+
+    event.waitUntil(
+        self.registration.showNotification(pushData.title, {
+            body: pushData.body,
+            icon: pushData.icon,
+            badge: pushData.badge,
         })
-      );
-    })
-  );
+    );
+});
+
+self.addEventListener('notificationclick', function(e) {
+  var notification = e.notification;
+
+    notification.close();
+    clients.openWindow('https://giphy.com/gifs/slow-clap-good-job-whisky-ENagATV1Gr9eg');
+    
 });

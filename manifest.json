@@ -1,12 +1,13 @@
 {
   "name": "Test app",
+  "gcm_sender_id": "674939941249",
   "short_name": "Tester",
   "theme_color": "#841bc6",
   "background_color": "#1bc65f",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": "/srp/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
