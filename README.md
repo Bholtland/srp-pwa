@@ -1,6 +1,10 @@
 # srp-pwa
 A study project on Progressive Web Apps
 
+PREREQUISITS
+--------------------
+* NodeJS
+
 PREFACE
 --------------------
 Boundaries between Native apps and websites are fading. More and more options for web developers to create native apps are available nowadays. Cordova, Phonegap, Electron but also Progressive Web Apps.
