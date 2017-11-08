@@ -1,8 +1,8 @@
 {
-  "name": "Test app",
-  "short_name": "Tester",
-  "theme_color": "#841bc6",
-  "background_color": "#1bc65f",
+  "name": "SRP-PWA",
+  "short_name": "PWA",
+  "theme_color": "#882fcc",
+  "background_color": "#882fcc",
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/",
