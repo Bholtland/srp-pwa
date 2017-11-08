@@ -1,5 +1,6 @@
 {
   "name": "SRP-PWA",
+  "gcm_sender_id": "674939941249",
   "short_name": "PWA",
   "theme_color": "#882fcc",
   "background_color": "#882fcc",
