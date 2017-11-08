@@ -1,6 +1,6 @@
 var CACHE_NAME = "my-cache";
 var cachedFiles = [
-  '/srp/index.html'
+  '/srp-pwa/index.html'
 ]
 
 self.addEventListener('install', function(event) {
