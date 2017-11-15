@@ -22,7 +22,7 @@ self.addEventListener('fetch', function(event) {
           return response;
         }
         return fetch(event.request).catch(error =>{
-          alert('Offline mode');
+          document.querySelector('h2').classList.add('offline');
         });
       }
     )
