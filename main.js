@@ -2,7 +2,7 @@ window.addEventListener("load", function(event) {
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw-main.js').then(initializeState);
-
+        var newWorker = registration.installing;
         newWorker.onstatechange = function() {
             if (newWorker.state == 'activated' && !navigator.serviceWorker.controller) {
                 console.log('offline now');
