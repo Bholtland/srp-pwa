@@ -29,6 +29,15 @@ WHAT DID I LEARN
 ---------------------
 I learnt how to make use of new api's for the web, how to setup a Service Worker, and how to create a manifest.json to simulate Native apps. At this point PWA's wont be useful for cross platform native app replacements, like Cordova and Phonegap, since the browser support is very limited. Both Apple and Microsoft are working on PWA's to be supported in mobile and desktop browsers.
 
+HOW DOES A PWA WORK?
+--------------------
+To start using the basic principles of Progressive Web Apps, like "Native app simulation" and offline usage, we have to set up a Service Worker and manifest.json. This example makes use of a static manifest.json file, but you could also use a manifest.php file to give your app some dynamic features.
+
+Let's start with the installation of the Service Worker. A Service Worker is a Javascript that runs inside your browser and intervenes between the client and the server. This allows you to do several things. You can download files from the Server and cache them on your device. You can choose whatever files you want to store. It's also always reachable, whether it's sleeping or active. This means that even though you're not actively using your browser, there is still communication possible with it due to the Service Worker listening. This concept allows for Push notifications being sent at every moment. 
+
+To install the Service Worker, the navigator has to register it (if it's available). 
+
+
 SOURCES I USED
 ---------------------
 * https://www.w3.org/TR/appmanifest/
