@@ -19,6 +19,7 @@ self.addEventListener('fetch', function(event) {
       .then(function(response) {
         if (response) {
           return response;
+          console.log('this file is offline');
         }
         return fetch(event.request);
       }
