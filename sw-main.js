@@ -17,9 +17,10 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
-        console.log('This is offline')
+
         if (response) {
           return response;
+          console.log('This is offlj')
         }
         return fetch(event.request);
       }
