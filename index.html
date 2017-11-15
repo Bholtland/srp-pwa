@@ -2,11 +2,46 @@
 <html>
 <head>
 	<title>PWA TEST APP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="manifest" href="manifest.json">
 </head>
 <body>
-	<h1>This is a Progressive Web App</h1>
+	<h1>This is a <br>Progressive Web App</h1>
 	<p>hello world</p>
+	<h2 class="offline">Online mode</h2>
+	
+	<style type="text/css">
+		
+		* {
+			font-family: helvetica;
+			color: #fff;
+		}
+		
+		body {
+			background-color: #333;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		p {
+			text-align: center;
+		}
+
+		h2 {
+			color: lightgreen;
+			font-weight: bold;
+			text-align: center;
+			font-size: 1.2rem;
+		}
+
+		h2.offline {
+			color: lightblue;
+		}
+
+	</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="main.js"></script>
