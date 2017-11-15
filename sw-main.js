@@ -18,7 +18,7 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request)
       .then(function(response) {
         if (response) {
-          console.log('offline')
+          alert('offline')
           return response;
         }
         return fetch(event.request);
