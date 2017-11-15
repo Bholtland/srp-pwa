@@ -17,7 +17,9 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
-        document.querySelector('h2').classList.add('offline');
+        indicator = document.querySelector('h2')
+        indicator.classList.add('offline');
+        indicator.innerHTML = "Offline mode";
         if (response) {
           return response;
         }
