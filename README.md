@@ -38,6 +38,7 @@ Let's start with the installation of the Service Worker. A Service Worker is a J
 To install the Service Worker, the navigator has to register it (if it's available). 
 
 
+
 SOURCES I USED
 ---------------------
 * https://www.w3.org/TR/appmanifest/
