@@ -21,7 +21,9 @@ self.addEventListener('fetch', function(event) {
           alert('offline')
           return response;
         }
-        return fetch(event.request);
+        return fetch(event.request).catch(error =>{
+          console.log('Fetch failed; returning offline page instead.', error);
+        });
       }
     )
   );
