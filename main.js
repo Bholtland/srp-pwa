@@ -2,6 +2,12 @@ window.addEventListener("load", function(event) {
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw-main.js').then(initializeState);
+
+        newWorker.onstatechange = function() {
+            if (newWorker.state == 'activated' && !navigator.serviceWorker.controller) {
+                console.log('offline now');
+            }
+        };
     } else {
         console.warn("Service worker not supported");
     }
