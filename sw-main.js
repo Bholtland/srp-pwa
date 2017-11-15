@@ -17,13 +17,11 @@ self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
       .then(function(response) {
+        document.querySelector('h2').classList.add('offline');
         if (response) {
-          alert('offline')
           return response;
         }
-        return fetch(event.request).catch(error =>{
-          document.querySelector('h2').classList.add('offline');
-        });
+        return fetch(event.request)
       }
     )
   );
