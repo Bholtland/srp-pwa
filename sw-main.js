@@ -22,7 +22,7 @@ self.addEventListener('fetch', function(event) {
           return response;
         }
         return fetch(event.request).catch(error =>{
-          console.log('Fetch failed; returning offline page instead.', error);
+          alert('Offline mode');
         });
       }
     )
